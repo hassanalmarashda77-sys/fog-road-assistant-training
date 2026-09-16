@@ -1,0 +1,26 @@
+name: Python Syntax Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Compile Python files
+        run: |
+          python -m py_compile \
+            check_environment.py \
+            prepare_fog_dataset.py \
+            train_fog_model.py \
+            evaluate_clear_fog.py \
+            export_ncnn.py
