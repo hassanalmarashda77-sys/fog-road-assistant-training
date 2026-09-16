@@ -23,4 +23,5 @@ jobs:
             prepare_fog_dataset.py \
             train_fog_model.py \
             evaluate_clear_fog.py \
-            export_ncnn.py
+            export_ncnn.py \
+            smoke_test.py
