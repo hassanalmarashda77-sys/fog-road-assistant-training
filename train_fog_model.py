@@ -65,6 +65,9 @@ def main():
 
     print("=" * 60)
 
+    project_dir = (Path.cwd() / "runs" / "fog_road").resolve()
+    print(f"Output  : {project_dir}")
+
     model = YOLO(str(model_path))
 
     model.train(
@@ -74,7 +77,7 @@ def main():
         batch=args.batch,
         patience=args.patience,
         device=device,
-        project="runs/fog_road",
+        project=str(project_dir),
         name="yolov8n_clear_fog",
         exist_ok=False,
         workers=2,
@@ -93,7 +96,7 @@ def main():
     )
 
     print("\nTraining finished.")
-    print("Use the best.pt created inside runs/fog_road/.../weights/")
+    print(f"Use the best.pt created inside: {project_dir}\\yolov8n_clear_fog\\weights\\best.pt")
 
 
 if __name__ == "__main__":
