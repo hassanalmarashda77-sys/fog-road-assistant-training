@@ -41,6 +41,9 @@ def main():
 
     print("=" * 60)
 
+    project_dir = (Path.cwd() / "runs" / "fog_road").resolve()
+    print(f"Output  : {project_dir}")
+
     model = YOLO(str(model_path))
     model.train(
         data=str(data_path),
@@ -49,7 +52,7 @@ def main():
         batch=args.batch,
         device=device,
         workers=2,
-        project="runs/fog_road",
+        project=str(project_dir),
         name="smoke_test",
         exist_ok=True,
         seed=42,
