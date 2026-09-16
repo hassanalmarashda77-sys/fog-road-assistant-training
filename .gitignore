@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+runs/
+fog_evaluation/
+*.pt
+*.onnx
+*.engine
+*_ncnn_model/
+DAWN/
+raw_data/
+fog_road_dataset/
