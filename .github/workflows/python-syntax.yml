@@ -24,4 +24,6 @@ jobs:
             train_fog_model.py \
             evaluate_clear_fog.py \
             export_ncnn.py \
-            smoke_test.py
+            smoke_test.py \
+            boost_weak_classes.py \
+            fine_tune_weak.py
