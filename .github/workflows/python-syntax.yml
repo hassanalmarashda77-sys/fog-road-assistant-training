@@ -26,4 +26,7 @@ jobs:
             export_ncnn.py \
             smoke_test.py \
             boost_weak_classes.py \
-            fine_tune_weak.py
+            fine_tune_weak.py \
+            prepare_real_boost_workspace.py \
+            import_real_boost.py \
+            train_real_boost.py
