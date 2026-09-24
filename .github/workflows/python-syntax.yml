@@ -31,4 +31,5 @@ jobs:
             import_real_boost.py \
             train_real_boost.py \
             prepare_rtts_boost.py \
-            prepare_bdd100k_fog_boost.py
+            prepare_bdd100k_fog_boost.py \
+            prepare_bdd100k_hf_boost.py
